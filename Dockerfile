@@ -9,6 +9,10 @@ RUN mkdir -p /mnt/sys-root; \
     # generate build time file for compatibility with CentOS
     /bin/date +%Y%m%d_%H%M > /mnt/sys-root/etc/BUILDTIME ;
 
+# Remove not needed folders
+
+RUN rm -rf /home /root /media /mnt
+
 FROM scratch
 
 COPY --from=system-build /mnt/sys-root/ /

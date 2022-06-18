@@ -5,7 +5,7 @@ RUN mkdir -p /mnt/sys-root; \
 #    glibc-minimal-langpack \
     --releasever 9 --setopt install_weak_deps=false --nodocs -y; \
     dnf --installroot /mnt/sys-root clean all; \
-    rm -rf /mnt/sys-root/var/cache/* /mnt/sys-root/var/log/dnf* /mnt/sys-root/var/log/yum.*; \
+    rm -rf /mnt/sys-root/var/cache/* /mnt/sys-root/var/log/dnf* /mnt/sys-root/var/log/yum.*;
     # cp /etc/yum.repos.d/*.repo /mnt/sys-root/etc/yum.repos.d/; \
     # generate build time file for compatibility with CentOS
 #    /bin/date +%Y%m%d_%H%M > /mnt/sys-root/etc/BUILDTIME ;

@@ -11,7 +11,7 @@ RUN mkdir -p /mnt/sys-root; \
 
 # Remove not needed folders
 
-RUN rm -rf /home /root /media /mnt
+RUN rm -rf /mnt/sys-root/home /mnt/sys-root/root /mnt/sys-root/media /mnt/sys-root/mnt
 
 FROM scratch
 
